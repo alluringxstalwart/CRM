@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/logos/STEAM_Logo_Mark_Color.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>STEAM Varsity</title>
+  </head>
+  <body class="text-gray-800 font-sans">
+    <!-- Mobile Menu Toggle -->
+    <button @click="open = true" class="md:hidden p-4">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    <!-- Page Layout -->
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside
+        class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:translate-x-0"
+        :class="{ '-translate-x-full': !open, 'translate-x-0': open }"
+      >
+        <div class="flex flex-col h-full">
+          <!-- Logo -->
+          <div class="relative flex items-center justify-center p-6 border-b">
+            <img
+              src="../images/logos/STEAM_VARSITY_Logo_Dark.png"
+              alt="Logo"
+              class="h-12 w-auto"
+            />
+            <button
+              @click="open = false"
+              class="absolute right-4 top-6 md:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-500"
+                fill="none"
+                viewBox="0 0 20 20"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 6l8 8M6 14L14 6"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="flex-1 px-4 py-6 space-y-4">
+            <a
+              href="dashboard.html"
+              class="flex items-center gap-3 p-3 rounded-xl text-white bg-[#51098f] hover:bg-[#6921a5] shadow-md transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 12l2-2m0 0l7-7 7 7m-7-7v18"
+                />
+              </svg>
+              Dashboard
+            </a>
+            <a
+              href="feed.html"
+              class="flex items-center gap-3 p-3 rounded-xl text-white bg-[#51098f] hover:bg-[#6921a5] shadow-md transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 3v4M8 3v4M3 9h18"
+                />
+              </svg>
+              Feed
+            </a>
+            <a
+              href="profile.html"
+              class="flex items-center gap-3 p-3 rounded-xl text-white bg-[#51098f] hover:bg-[#6921a5] shadow-md transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.121 17.804A13.937 13.937 0 0112 15c2.757 0 5.303.832 7.379 2.25M15 10a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Profile
+            </a>
+            <a
+              href="account.html"
+              class="flex items-center gap-3 p-3 rounded-xl text-white bg-[#51098f] hover:bg-[#6921a5] shadow-md transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
+              </svg>
+              Account
+            </a>
+          </nav>
+
+          <!-- Logout Button -->
+          <div class="px-4 pb-6">
+            <a
+              href="#"
+              class="flex items-center gap-3 p-3 rounded-xl text-white bg-red-600 hover:bg-red-700 shadow-md transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1"
+                />
+              </svg>
+              Logout
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Profile Page Content -->
+<div class="flex-1 p-8 bg-gray-50 ml-64 min-h-screen">
+  <!-- Profile Header -->
+  <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center md:flex-row md:items-start gap-6 mb-10">
+    <!-- Profile Picture -->
+    <img src="..\images\pictures\profilepic.jpeg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-[#51098f] object-cover">
+
+    <!-- Profile Info -->
+    <div>
+      <h2 class="text-3xl font-bold text-gray-800">Paras Deshmukh</h2>
+      <p class="text-[#51098f] font-semibold">Student</p>
+      <p class="text-gray-600 mt-2 max-w-xl">
+        Passionate about tech, education, and AI. Exploring the edges of machine learning and helping others learn STEAM.
+      </p>
+    </div>
+  </div>
+
+  <!-- Highlights Section -->
+  <div class="mb-10">
+    <h3 class="text-xl font-bold text-gray-800 mb-4">Highlights</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Highlight Card -->
+      <div class="bg-white p-4 rounded-xl shadow text-center">
+        <h4 class="text-[#51098f] font-semibold text-lg">Top Contributor</h4>
+        <p class="text-sm text-gray-600 mt-2">Awarded in May 2025</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow text-center">
+        <h4 class="text-[#51098f] font-semibold text-lg">Hackathon Winner</h4>
+        <p class="text-sm text-gray-600 mt-2">STEAM HackFest 2025</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow text-center">
+        <h4 class="text-[#51098f] font-semibold text-lg">Mentorship Badge</h4>
+        <p class="text-sm text-gray-600 mt-2">For guiding 10+ juniors</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Posts & Saved Tabs -->
+<div>
+  <!-- Tab Buttons -->
+  <div class="flex gap-4 mb-6">
+    <button class="px-4 py-2 rounded-full bg-[#51098f] text-white font-semibold">Posts</button>
+    <button class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Saved</button>
+  </div>
+
+  <!-- Post Grid Container -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
+
+  <!-- Post Card -->
+  <div class="relative group aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+    <img src="../images/pictures/chatbot.jpeg" alt="Chatbot" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
+    <!-- Hover Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-6 text-white font-semibold text-sm transition">
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"/>
+        </svg>
+        <span>120</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M18 10c0 3.866-3.582 7-8 7a8.5 8.5 0 01-4.19-1.11L3 17l1.065-2.848C3.402 12.943 3 11.506 3 10c0-3.866 3.582-7 8-7s8 3.134 8 7z"/>
+        </svg>
+        <span>45</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Card 2 -->
+  <div class="relative group aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+    <img src="../images/pictures/webdesign.png" alt="Web Design" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
+    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-6 text-white font-semibold text-sm transition">
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"/>
+        </svg>
+        <span>90</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M18 10c0 3.866-3.582 7-8 7a8.5 8.5 0 01-4.19-1.11L3 17l1.065-2.848C3.402 12.943 3 11.506 3 10c0-3.866 3.582-7 8-7s8 3.134 8 7z"/>
+        </svg>
+        <span>20</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Card 3 -->
+  <div class="relative group aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+    <img src="../images/pictures/mlapp.png" alt="ML App" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
+    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-6 text-white font-semibold text-sm transition">
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"/>
+        </svg>
+        <span>76</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M18 10c0 3.866-3.582 7-8 7a8.5 8.5 0 01-4.19-1.11L3 17l1.065-2.848C3.402 12.943 3 11.506 3 10c0-3.866 3.582-7 8-7s8 3.134 8 7z"/>
+        </svg>
+        <span>18</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Saved Grid (same style, replace images or add toggle logic later) -->
+  <!-- Optional: This section can be toggled with JS/Alpine if needed -->
+</div>
+</div>
+    </div>
+  </body>
+</html>
