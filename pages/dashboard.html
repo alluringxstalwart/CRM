@@ -209,100 +209,238 @@
             <h2 class="text-sm text-gray-500 mb-2 uppercase">Pending Posts</h2>
             <p class="text-3xl font-bold text-red-500">3</p>
           </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition"
+          >
+            <h2 class="text-sm text-gray-500 mb-2 uppercase">
+              Mentored Projects
+            </h2>
+            <p class="text-3xl font-bold text-[#51098f]">10</p>
+          </div>
         </div>
-        <!-- Recent Projects Section -->
-<div class="mt-12">
-  <h2 class="text-2xl font-bold text-gray-800 mb-6">Recent Projects</h2>
 
-  <!-- Project Card -->
+        <!-- Today's Activity Section -->
+<div class="mt-12 relative">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Today's Activity</h2>
+
+  <!-- Activity Card -->
   <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6">
-    <!-- Project Image -->
-    <img src="..\images\pictures\chatbot.jpeg" alt="Project Thumbnail" class="w-full md:w-60 h-48 object-cover md:h-auto">
+    <!-- Activity Image -->
+    <img
+      src="../images/pictures/activity.jpg"
+      alt="Today's Activity"
+      class="w-full md:w-60 h-48 object-cover md:h-auto"
+    />
 
-    <!-- Project Info -->
+    <!-- Activity Info -->
     <div class="p-6 flex flex-col justify-between flex-1">
       <div>
-        <h3 class="text-xl font-semibold text-[#51098f] mb-2">AI Chatbot for Education</h3>
+        <h3 class="text-xl font-semibold text-[#51098f] mb-2">RC controlled car</h3>
         <p class="text-gray-600 mb-4">
-          A conversational AI assistant built to support student queries on course content, assignments, and deadlines using NLP and machine learning.
+          Created and programmed a remotely controlled car using MIT App Inventor.
         </p>
       </div>
-
-      <!-- Tags -->
       <div class="flex flex-wrap gap-2">
-        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Python</span>
-        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">NLP</span>
-        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">TensorFlow</span>
-        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Chatbot</span>
+        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Arduino</span>
+        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">MIT App Inventor</span>
+        <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">BLE</span>
+         <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Motor Driver</span>
+      
       </div>
     </div>
   </div>
 
-  <!-- Project Card -->
-  <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6">
-  <!-- Project Image -->
-  <img src="..\images\pictures\stemapp.png" alt="STEM App" class="w-full md:w-60 h-48 object-cover md:h-auto">
-
-  <!-- Project Info -->
-  <div class="p-6 flex flex-col justify-between flex-1">
-    <div>
-      <h3 class="text-xl font-semibold text-[#51098f] mb-2">STEM Learning Mobile App</h3>
-      <p class="text-gray-600 mb-4">
-        An interactive app designed to teach science and math concepts through gamified quizzes, AR experiments, and animated tutorials for school students.
-      </p>
-    </div>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Flutter</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Firebase</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">ARCore</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Gamification</span>
-    </div>
-  </div>
-</div>
-  <!-- Project Card -->
-  <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6">
-  <!-- Project Image -->
-  <img src="..\images\pictures\webdesign.png" alt="Website Redesign" class="w-full md:w-60 h-48 object-cover md:h-auto">
-
-  <!-- Project Info -->
-  <div class="p-6 flex flex-col justify-between flex-1">
-    <div>
-      <h3 class="text-xl font-semibold text-[#51098f] mb-2">STEAM Varsity Website Redesign</h3>
-      <p class="text-gray-600 mb-4">
-        A full UI/UX revamp of the STEAM Varsity site to improve navigation, accessibility, and user engagement using responsive design best practices.
-      </p>
-    </div>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">HTML</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Tailwind CSS</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Figma</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Accessibility</span>
-    </div>
-  </div>
+  <!-- Add Activity Button positioned within section -->
+  <a
+    href="#"
+    class="absolute bottom-0 right-0 bg-[#51098f] hover:bg-[#6921a5] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg text-3xl transition"
+    title="Add Today's Activity"
+  >
+    +
+  </a>
 </div>
 
-  <!-- Project Card -->
- <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6">
-  <!-- Project Image -->
-  <img src="..\images\pictures\mlapp.png" alt="Career Recommender" class="w-full md:w-60 h-48 object-cover md:h-auto">
+        <!-- Recent Projects Section -->
+        <div class="mt-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Recent Projects</h2>
 
-  <!-- Project Info -->
-  <div class="p-6 flex flex-col justify-between flex-1">
-    <div>
-      <h3 class="text-xl font-semibold text-[#51098f] mb-2">ML Career Recommender</h3>
-      <p class="text-gray-600 mb-4">
-        A machine learning-powered platform that suggests career paths based on user skills, interests, and academic history using classification models.
-      </p>
-    </div>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Scikit-learn</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Pandas</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">React</span>
-      <span class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full">Career Guidance</span>
-    </div>
-  </div>
-</div>
-</div>
+          <!-- Project Card -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6"
+          >
+            <!-- Project Image -->
+            <img
+              src="..\images\pictures\chatbot.jpeg"
+              alt="Project Thumbnail"
+              class="w-full md:w-60 h-48 object-cover md:h-auto"
+            />
+
+            <!-- Project Info -->
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="text-xl font-semibold text-[#51098f] mb-2">
+                  AI Chatbot for Education
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A conversational AI assistant built to support student queries
+                  on course content, assignments, and deadlines using NLP and
+                  machine learning.
+                </p>
+              </div>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >NLP</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >TensorFlow</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Chatbot</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6"
+          >
+            <!-- Project Image -->
+            <img
+              src="..\images\pictures\stemapp.png"
+              alt="STEM App"
+              class="w-full md:w-60 h-48 object-cover md:h-auto"
+            />
+
+            <!-- Project Info -->
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="text-xl font-semibold text-[#51098f] mb-2">
+                  STEM Learning Mobile App
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  An interactive app designed to teach science and math concepts
+                  through gamified quizzes, AR experiments, and animated
+                  tutorials for school students.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Flutter</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Firebase</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >ARCore</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Gamification</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project Card -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6"
+          >
+            <!-- Project Image -->
+            <img
+              src="..\images\pictures\webdesign.png"
+              alt="Website Redesign"
+              class="w-full md:w-60 h-48 object-cover md:h-auto"
+            />
+
+            <!-- Project Info -->
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="text-xl font-semibold text-[#51098f] mb-2">
+                  STEAM Varsity Website Redesign
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A full UI/UX revamp of the STEAM Varsity site to improve
+                  navigation, accessibility, and user engagement using
+                  responsive design best practices.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >HTML</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Figma</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Accessibility</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row mb-6"
+          >
+            <!-- Project Image -->
+            <img
+              src="..\images\pictures\mlapp.png"
+              alt="Career Recommender"
+              class="w-full md:w-60 h-48 object-cover md:h-auto"
+            />
+
+            <!-- Project Info -->
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="text-xl font-semibold text-[#51098f] mb-2">
+                  ML Career Recommender
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A machine learning-powered platform that suggests career paths
+                  based on user skills, interests, and academic history using
+                  classification models.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Scikit-learn</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Pandas</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >React</span
+                >
+                <span
+                  class="bg-[#f3e8ff] text-[#51098f] text-sm px-3 py-1 rounded-full"
+                  >Career Guidance</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
